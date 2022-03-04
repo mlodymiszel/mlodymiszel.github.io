@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+        <meta charset="utf-8">
+        <title>mlodymiszel</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content=" ">
+        <meta property="og:title" content=" ">
+        <meta property="og:description" content=" ">
+        <meta property="og:url" content="https://symbolized.xyz"/>
+         <meta property="og:image" content="https://i.imgur.com/CB23GGn.png">
+        <meta name="theme-color" content="#400000">
+        <link rel="stylesheet" href="main.css">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    </head>
+    <body>
+        <main>
+            <script>
+                function audioPlay() {
+                    var audio = document.getElementById("audio");
+                    audio.volume = 0.8;
+                    audio.play()
+                }
+                function videoPlay() {
+                    var video = document.getElementById("video");
+                    video.play()
+                }
+            </script>
+<!--Inspect blocker-->
+	<script language="JavaScript">
+		document.onkeypress = function (event) {
+			event = (event || window.event);
+			if (event.keyCode == 123) {
+				return false;
+			}
+		}
+		document.onmousedown = function (event) {
+			event = (event || window.event);
+			if (event.keyCode == 123) {
+				return false;
+			}
+		}
+	document.onkeydown = function (event) {
+			event = (event || window.event);
+			if (event.keyCode == 123) {
+				return false;
+			}
+		}
+	 
+	var message="Sorry, right-click has been disabled";
+	 
+	function clickIE() {if (document.all) {(message);return false;}}
+	function clickNS(e) {if
+	(document.layers||(document.getElementById&&!document.all)) {
+	if (e.which==2||e.which==3) {(message);return false;}}}
+	if (document.layers)
+	{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+	else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+	document.oncontextmenu=new Function("return false")
+	 
+	function disableCtrlKeyCombination(e)
+	{
+	 
+	var forbiddenKeys = new Array('a', 'n', 'c', 'x', 'v', 'j' , 'u', 'w', 'i');
+	var key;
+	var isCtrl;
+	if(window.event)
+	{
+	key = window.event.keyCode;    
+	if(window.event.ctrlKey)
+	isCtrl = true;
+	else
+	isCtrl = false;
+	}
+	else
+	{
+	key = e.which;    
+	if(e.ctrlKey)
+	isCtrl = true;
+	else
+	isCtrl = false;
+	}
+	if(isCtrl)
+	{
+	for(i=0; i<forbiddenKeys.length; i++)
+	{
+	if(forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase())
+	{
+	return true;
+	}
+	}
+	}
+	return true;
+	}
+	 
+		$(window).on('keydown',function(event)
+		{
+		if(event.keyCode==123)
+		{
+			return false;
+		}
+		else if(event.ctrlKey && event.shiftKey && event.keyCode==73)
+		{
+			return false;  //Prevent from ctrl+shift+i
+		}
+		else if(event.ctrlKey && event.keyCode==73)
+		{
+			return false;  //Prevent from ctrl+shift+i
+		}
+	});
+	$(document).on("contextmenu",function(e)
+	{
+	e.preventDefault();
+	});
+	 
+		$(window).on('keydown',function(event)
+		{
+		if(event.keyCode==123)
+		{
+			return false;
+		}
+		else if(event.ctrlKey && event.shiftKey && event.keyCode==74)
+		{
+			return false;  //Prevent from ctrl+shift+j
+		}
+		else if(event.ctrlKey && event.keyCode==74)
+		{
+			return false;  //Prevent from ctrl+shift+j
+		}
+	});
+	$(document).on("contextmenu",function(e)
+	{
+	e.preventDefault();
+	});
+		$(window).on('keydown',function(event)
+		{
+		if(event.keyCode==123)
+		{
+			return false;
+		}
+		else if(event.ctrlKey && event.shiftKey && event.keyCode==73)
+		{
+			return false;  //Prevent from ctrl+shift+i
+		}
+		else if(event.ctrlKey && event.keyCode==73)
+		{
+			return false;  //Prevent from ctrl+shift+i
+		}
+	});
+	$(document).on("contextmenu",function(e)
+	{
+	e.preventDefault();
+	});
+	 
+		$(window).on('keydown',function(event)
+		{
+		if(event.keyCode==123)
+		{
+			return false;
+		}
+		else if(event.ctrlKey && event.keyCode==70)
+		{
+			return false;  //Prevent from ctrl+f
+		}
+		else if(event.ctrlKey && event.keyCode==70)
+		{
+			return false;  //Prevent from ctrl+f
+		}
+	});
+	$(document).on("contextmenu",function(e)
+	{
+	e.preventDefault();
+	});
+	   $(window).on('keydown',function(event)
+		{
+		if(event.keyCode==123)
+		{
+			return false;
+		}
+		else if(event.keyCode==122)
+		{
+			return false;  //Prevent from f11
+		}
+		else if(event.keyCode==122)
+		{
+			return false;  //Prevent from f11
+		}
+	});
+	$(document).on("contextmenu",function(e)
+	{
+	e.preventDefault();
+	});
+	</script>
+
+            <input type="checkbox" autocomplete="off" id="overlay-toggle">
+            <div class="overlay fullscreen">
+                <label for="overlay-toggle" onclick="audioPlay();videoPlay()">
+                    <span class="no-hover" style="font-family: mono; font-size: 0.6em;">tap to enter</span>
+                    <span class="hover" style="font-family: mono; font-size: 0.6em;">click to enter</span>
+                </label>
+            </div>
+            <audio loop preload="auto" id="audio">
+                <source src="deucefade.mp3" type="audio/mp3">
+            </audio>
+            <video muted loop playsinline preload="auto" class="fullscreen bg-video" id="video">
+                <source src="bg-video.mp4" type="video/mp4">
+            </video>
+            <section class="fullscreen text-content">
+                <h1 style="font-family: derk; text-shadow: 0 0 0.40em #5e0000;">OG</h1>
+                
+                <p style="font-family: mono; font-size: 1.1em; text-shadow: 0 0 0.40em #5e0000;">mlodymiszel</p>
+                
+              <div class='links'>
+                                    <span>
+                        
+<a href="https://discord.gg/hVpn5KkMXX" target="blank">discord</a>
+                    </span>
+                    <span>
+                        
+<a href="https://www.twitch.tv/mlodymiszel/" target="blank">twitch</a>
+                    </span>
+                    <span>
+                        
+<a href="https://steamcommunity.com/id/mlodymiszel/" target="blank">steam</a>
+                    </span>
+                    <span>
+                        
+<a href="https://www.youtube.com/c/mlodymiszel" target="blank"> yt</a>
+                    </span>
+            </div>
+        </main>
+    </body>
